@@ -1,0 +1,26 @@
+.chat-main
+  .main_header
+    .left-box
+      %h1.group_name test 
+      %ul.member_list 
+        Member : 
+        %li.member_name masa
+    = link_to  "Edit", "#", class: "edit__btn" 
+  .message_list
+    .message_box
+      %p.message_member masa
+      %P.message_data 2019/11/20(Wed) 17:43:01
+    %p.message_text おはよう
+    .message_box
+      %p.message_member masa
+      %P.message_data 2019/11/20(Wed) 17:43:01
+    %p.message_text おはよう
+  .message_form
+    %form 
+      .input-box
+        %input{type: "text", placeholder: "type a message", class: "input-text"}
+        %label{class:"input_image"}
+          =icon("far","image")
+          %input{type: "file"}
+      %input{type: "submit", value: "Send", class: "send__btn"}
+    
