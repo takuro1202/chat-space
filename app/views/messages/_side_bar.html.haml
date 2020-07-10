@@ -5,14 +5,16 @@
         = current_user.name
       %ul.box-menu 
         %li.box_user_edit
-          = link_to  do
+          = link_to new_group_path do
             = icon('fas','edit',class: 'icon')
         %li.box_cog
           = link_to edit_user_path(current_user) do
             = icon('fas', 'cog',class: 'icon')
   .group_list
-    .list-box1 techcamp
-    .list-box2 まだメッセージがありません
-    .list-box1 techcamp
-    .list-box2 まだメッセージがありません
-    
+    - current_user.groups.each do |group|
+      .group
+        = link_to   do
+          .list-box1
+            = group.name
+          .list-box2
+            メッセージはまだありません。
