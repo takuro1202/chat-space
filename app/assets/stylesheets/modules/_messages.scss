@@ -74,6 +74,8 @@ $section-color: #ffffff;
       color: #333333;
       font-size: 20px;
       margin:35px 0 15px 40px;
+      text-align: left;
+      font-weight: normal;
     }
     .member_list {
       display: flex;
@@ -98,15 +100,18 @@ $section-color: #ffffff;
   .message_list {
     height: calc(100vh - 100px - 90px);
     background-color: #fafafa;
-    .message_box {
+    overflow: scroll;
+    .upper-message {
       display: flex;
       padding: 35px 0 12px 40px;
       .message_member {
         color:#333333;
         font-size: 16px;
         margin-right: 6px;
+        font-weight: normal;
+        
       }
-      .message_data {
+      .message_date {
         color: #999999;
         font-size: 12px;
       }
